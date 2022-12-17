@@ -1,0 +1,71 @@
+Kangoroo 漢語労
+
+Kurzanleitung:
+Bevor Sie sich durch die komplette Referenz durcharbeiten, sollten Sie ein wenig mit Kangoroo spielen, um mit seinen Grundfunktionen vertraut zu werden.
+- Es handelt sich in erster Linie um eine Wörterbuch-Software. Geben Sie also Ihren Suchbegriff auf Japanisch oder Deutsch oder Englisch ein und drücken Sie die Eingabetaste, oder klicken Sie auf "Search".
+- Blaue Schrift im grossen Haupttextbereich ist anklickbar. Klicken Sie beispielsweise auf ein Kanji, um den Link zu verfolgen (versuchen Sie es mit 漢).
+- Oben links wird das aktuelle Kanji in seine graphischen Elemente zerlegt ("segmentiert") angezeigt. Auch die graphischen Elemente sind anklickbar...
+- Der "Train"-Button startet einen der Vokabel-/Kanjitrainer, die im Menu ausgewählt werden können. Dafür müssen zuerst Vokabeln/Kanji in die ensprechenden Listen eingetragen werden...
+
+... Wie man dies und vieles mehr macht, steht unten. Jetzt empfehlen wir Ihnen, sich zunächst mit den Grundfunktionen von Kangoroo vertraut zu machen -- viel Spaß!
+
+Einführung:
+Kangoroo ist eine Wörterbuch-Software, die zum Lernen der japanischen Sprache und insbesondere ihrer Schriftzeichen entwickelt wurde. Momentan liegen Wörterbücher für Englisch und Deutsch vor.
+
+Kangoroo bietet neben den Funktionen eines normalen elektronischen Wörterbuches weitere Features.
+1. Alle Kanji können per Maus direkt angeklickt werden. Es erscheinen Informationen zum Zeichen selbst sowie eine Liste mit Wörtern, die dasselbe Kanji enthalten (versuchen Sie es und klicken Sie auf 漢). Dies hilft, Bedeutung und Lesarten des Kanjis zu lernen.
+2. Bereits gelernte Wörter sowie Wörter, die gelernt werden sollen,  können in aktuellen Lern-Dateien gespeichert werden. Diese können separat abgerufen werden, tauchen aber ebenso in den Wortlisten als farbkodierte Einträge auf und werden somit bei jedem Benutzen des Wörterbuchs früher oder später wiederholt (je nachdem, wann ein neues Kanji als Link fungiert). Das Wörterbuch reflektiert somit den aktuellen Wissensstand des Anwenders und wird zu seinem persönlichen Repetitor.
+3. Kanji werden in ihre graphischen Bestandteile ("Building Blocks") segmentiert angezeigt. Die Building Blocks sind minteinander verlinkt. Außerdem kann für jedes Kanji und jeden Building Block ein Schlüsselwort abgespeichert werden.
+4. Kangoroo enthält verschiedene Vokabel-/Kanjitrainer.
+
+Wörterbücher:
+Das vorliegende Japanisch-Deutsch+Englische Wörterbuch "DEDict" ist eine Zusammenstellung von EDict (Jim Breen) und WaDoku (Ulrich Apel). Insgesamt sind etwa 300.000 Einträge enthalten, von denen etwa 20.000 Wörter enthalten als "häufig" markiert sind (priority entries). Weiterhin wird Jim Breens Kanjidic verwendet.
+
+Benutzung:
+Suchwörter können mit Romaji, Kana oder Kanji eingegeben werden. Mit der Enter-Taste oder dem "Search" Button werden Suchaufträge gestartet. "Memo" sucht in der Liste der bereits memorisierten Wörter (siehe auch bei "Settings" weiter unten). "Kanji" liefert Informationen zum eingegebenen Schriftzeichen: Die Japanischen Lesungen, die Englische Bedeutung, und den Heisig-Index. Außerdem wird eine Liste von Wörtern angezeigt, die das entsprechende Kanji enthalten.
+
+Umlaute:
+Bitte Umlaute als "ae", "ue", "ss" etc. eingeben.
+
+Joker:
+Alle Einträge werden als ganze Wörter behandelt. Für unbekannte Wortanfänge oder -enden können "Joker" benutzt werden: "*" ist ein Platzhalter für jede beliebige Zeichensequenz, "?" steht für genau ein Schriftzeichen. Beispielsweise findet "essen*" Einträge, die mit essen beginnen, also etwa 会食 (gemeinsames Essen), aber auch Resultate für Essenz. "?食" liefert aus zwei Zeichen bestehende Wörter, die auf 食 enden, z.B. 外食. "食*物" findet 食べ物 (たべもの) und andere. Mehrere Ausdrücke können kombiniert werden: "食べ* eat" findet 食べる, "食べ* *eat" zusätzlich  食べ過ぎる (zu viel essen). Bei kombinierten Suchen muss auf die richtige Eingabereihenfolge geachtet werden: erst japanische Schreibung (Kanji und/oder Kana), dann japanische Lesung (Hiragana), dann Deutsch, dann Englisch. 
+
+Ergebnisse:
+Die Ergebnisse sind farbkodiert. "Common"-Einträge erscheinen in grün und "memo"-Einträge in rot. Gelbe Einträge schließlich weisen auf die aktuellev Lernliste hin. Rote und gelbe Einträge (d.h. schon gelernte und noch zu lernende) erscheinen in den Auflistungen immer an erster, schwarze Einträge an letzter Stelle.  
+ 
+Am Ende jeder Zeile der Ergebnisliste erscheinen weitere Links: ">>" macht den Eintrag in seiner vollen Länge sichtbar (oftmals sind die Einträge zu lang für eine Zeile), "M" markiert den Eintrag als "gelernt" und zeigt ihn von nun an in rot, "*" markiert den Eintrag als "noch nicht gelernt" und zeigt ihn von nun an in gelb, "X" entfernt bereits markierte Wörter aus der Memo-Liste und lässt sie wieder grün oder schwarz erscheinen.
+
+Kangoroo kann verschiedene Lerndateien nebeneinander führen. Dies kann z.B. sinnvoll sein, wenn verschiedene Anwender denselben Computer benutzen, jeder aber seine persönlichen Lerndatei anlegen möchte. Die aktuelle Lerndatei kann im Menu "LearnFile" ausgewählt werden.
+
+Kanji-Segmentierung:
+Im oberen linken Bereich der Kangoroo-Anwendung werden die Kanji in ihre graphischen Elemente ("Building Blocks") zerlegt und farblich codiert dargestellt. Klicken Sie auf einen Building Block, um zu der jeweiligen Information zu springen. Viele Building Blocks, jedoch nicht alle, sind selbst Kanji. Umgekehrt wird für jeden Building Block eine Liste von Schriftzeichen angezeigt, in denen er vorkommt. Diese Liste wird für Kanji normalerweise nach der Wortliste angezeigt, es sei den, die Option "display KanjiBB first" im Menu Settings ist angewählt.
+
+Schlüsselwörter:
+Jedem Kanji oder Building Block, der graphisch segmentiert angezeigt wird, kann auch ein Schlüsselwort zugeordnet werden. Klicken Sie dazu einfach auf die Schrift "(no keyword given)", die direkt nach dem Kanji angezeigt wird, und ein Dialog erscheint. In diesem Dialog können Sie weiterhin Kanji mit einem besonderen Marker versehen, der anzeigt, dass das Kanji repitiert werden soll.
+
+Repetition:
+Der "train"-Button ruft Einträge aus den Vokabel-Lernlisten oder von den annotierten Kanji in zufälliger Reihenfolge auf. Im Fall von Vokabeln kann per Menu "Settings" ausgewählt werden, aus welcher Liste die Einträge stammen sollen: "memo: all" nimmt Einträge aus der "roten" und der "gelben" Liste, d.h. bereits gelernte und noch nicht gelernte Wörter, "memo: without *" nimmt Einträge aus der "roten" Liste, und "memo: with *" nimmt Einträge aus der "gelben" Liste. Diese Einstellung beeinflusst auch die normale "memo"-Wortanfrage.
+ 
+Per Menu "Settings" wird ausgewählt, ob Sie Vokabeln oder Kanji abgefragt werden wollen, sowie die "Abfragerichtung". Ferner wählen Sie im Fall von Kanji in diesem Menu aus, ob sie nur die markierten abgefragt werden wollen, und ob Kangoroo Sie auch nach Building Blocks fragen soll.
+
+Shortcuts:
+Die meisten Buttons haben eine Abkürzung ("Shortcut"), nämlich den unterstrichenen Buchstaben. Ctrl plus dieser Buchstabe führt die entsprechende Funktion aus. Ctrl+B navigiert zurück, Ctrl+F vorwärts.
+
+Credits:
+Die Kangoroo Software ist nur ein kleiner Teil das Ganzen! An dieser Stelle herzlichen Dank den Autoren der Wörterbücher, die dieses Projekt ermöglicht haben
+Jim Breen, Author des EDict Wörterbuches (Japanisch-Englisch)
+Ulrich Apel, Author und Koordinator des WaDoku Wörterbuches (Japanisch-Deutsch)
+und all jenen, die zu den Wörterbüchern beigetragen haben!
+
+Dank geht auch an
+James Heisig, der als einer der ersten vorschlug, Kanji zu segmentieren, um sie leichter zu lernen, und
+Anne Poland, die die vorliegende Segmentierung erarbeitete.
+
+Weiteres:
+Es gibt schnelle und langsame Suchen: enthält die Anfrage ein Wort mit eindeutigem Beginn (mindestens zwei Buchstaben oder ein Kana/Kanji) ein, so wird eine Index-Suche gestartet, die vergleichsweise schnell ist. Bei Eingaben, die mit "*" / "?" beginnen, ist eine solche Index-Suche nicht möglich, und die erfolgende Durchsuchung der gesamten Datenbank erfordert mehr Zeit. Für diese Suchen kann der voreingestellte Suchbereich im Menu "Settings" zwischen "all" und "common" umgeschaltet werden, für die schnellen Index-Suchen ist der voreingestellte Suchbereich immer "all".
+ 
+Mit dem "cp&p"-Button (copy and paste) können markierte Wörter aus dem Ergebnisfeld in das Suchfeld kopiert werden. Die bekannte Tastenkombination Ctrl+V kann für ein gewöhnliches Paste verwendet werden.
+
+Geben Sie eine Nummer ein und klicken Sie auf "Kanji", um Kanji mit der zugehörigen Heisig-Indexnummer zu finden.
+
+Was bedeutet "漢語労" ("Kangoroo")? Dieser Name hat zwei Bedeutungen. Die erste bezieht sich natürlich auf das Tier (von Kanji zu Kanji "springen"). Die zweite Bedeutung ist in der japanischen Schreibweise versteckt. Klicken Sie einfach die Kanji und schauen Sie selbst...

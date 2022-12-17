@@ -1,0 +1,4 @@
+qmake -makefile kangoroo-qt.pro
+make clean
+make
+

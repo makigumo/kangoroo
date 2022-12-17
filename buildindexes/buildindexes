@@ -1,0 +1,44 @@
+#!/bin/bash
+
+################ main script
+
+./mkidx.pl ../$1/
+
+################ kanji meta
+
+indexchar="L"
+#the index number identifier, see the documentation of Kanjidic
+#e.g. L stands for Heisig, E for Henshall, V for New Nelson etc...
+#the corresponding index ist used when a Kanji is queried by the number
+
+./mkmeta.pl kkdic ../$1/ >../$1/kkdic.meta
+./mkkim.pl $indexchar ../$1/ >../$1/kindex.meta
+./mkksm.pl ../$1/ >../$1/kseg.meta
+
+################ meta
+
+./mkmeta.pl de ../$1/ >../$1/de.meta
+./mkmeta.pl kana ../$1/ >../$1/kana.meta
+./mkmeta.pl kanji ../$1/ >../$1/kanji.meta
+
+################ black list
+
+./mkblacklist.pl de ../$1/ > ../$1/blacklist.utf8
+./mkblacklist.pl kana ../$1/ >> ../$1/blacklist.utf8
+./mkblacklist.pl kanji ../$1/ >> ../$1/blacklist.utf8
+
+################ info
+
+./mkinfo.pl ../$1/ > ../$1/index.nfo
+cat ../$1/de.meta | wc -l >> ../$1/index.nfo
+cat ../$1/kana.meta | wc -l >> ../$1/index.nfo
+cat ../$1/kanji.meta | wc -l >> ../$1/index.nfo
+cat ../$1/kkdic.meta | wc -l >> ../$1/index.nfo
+cat ../$1/kindex.meta | wc -l >> ../$1/index.nfo
+cat ../$1/kseg.meta | wc -l >> ../$1/index.nfo
+echo $indexchar >>../$1/index.nfo
+cat ../$1/dic.utf8 | wc -L >> ../$1/index.nfo
+cat ../$1/de.idx | wc -L >> ../$1/index.nfo
+cat ../$1/kana.idx | wc -L >> ../$1/index.nfo
+cat ../$1/kanji.idx | wc -L >> ../$1/index.nfo
+cat ../$1/kkdic.idx | wc -L >> ../$1/index.nfo

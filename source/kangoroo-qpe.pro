@@ -1,0 +1,10 @@
+TEMPLATE	= app
+#CONFIG		= qt warn_on debug
+CONFIG		= qt warn_on release
+HEADERS		= kangoroo.h kangbrowser.h kanglineedit.h kangpushbutton.h kanjipic.h keydlg.h
+SOURCES		= main-qpe.cpp kangoroo.cpp kangbrowser.cpp kanglineedit.cpp kangpushbutton.cpp kanjipic.cpp keydlg.cpp
+INCLUDEPATH	+= $(QPEDIR)/include
+DEPENDPATH	+= $(QPEDIR)/include
+LIBS            += -lqpe
+DEFINES		+= QTOPIA
+TARGET		= kangoroo

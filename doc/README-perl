@@ -1,0 +1,73 @@
+
+============================
+Kangoroo Perl v0.5 
+============================
+
+http://www-alg.ist.hokudai.ac.jp/~jan/kangoroo.html
+
+June 2006 Jan Poland
+
+------------
+
+NOTE: This Kangoroo version is written in Perl and DIFFERENT from the QT version.
+It is a web-based interface, to be installed on a (local) web server. It is
+probably not going to be maintained very much in the future.
+
+The main features are the same as those of Kangoroo (QT), but some details are
+missing (e.g. train function).
+
+This Kangoroo-Perl is provided only for "emergency", please use the QT version 
+if you can. However, if Kangoroo-QT does not run on your system (e.g. old Windows
+version), maybe you can use Kangoroo-Perl.
+
+------------
+
+Installing Kangoroo Perl
+
+Kangoroo Perl is a web-based software written in perl that runs on a web server
+(any operating system) and is accessed by a web browser (any operating system).
+
+* install perl and a web server such as Apache
+* make sure that the web server can execute perl cgi scripts
+* make sure that the web server correctly delivers UTF-8 pages, e.g. for Apache2
+  with Linux you have to make sure that the /etc/apache2/file mod_mime-defaults.conf
+  contains the line "AddDefaultCharset Off" rather than "AddDefaultCharset ISO-8859-1"
+* obtain a Kangoroo resource package (kangoroo_0.5_edict.zip or kangoroo__0.5_dedict.zip)
+  and the Kangoroo-Perl software kangoroo-perl_0.5.zip
+* unpack Kangoroo-Perl and the resources to one directory of your choice, all files are 
+  written to a subdirectory kangoroo (make sure that especially dic.utf8 and kdic.utf8 are 
+  contained in this directory)
+* chdir to that directory and split the indexes by executing "./splitidx"
+* after splitting the indexes, you may remove all .idx, .meta and .nfo files (unless you
+  also want to use Kangoroo-QT)
+* place kangoroo.pl and kangmain.pl in the cgi-bin directory of your web server
+* edit kangoroo.pl, making sure in particular that the $prefix points to the resource
+  directory (see the documentation in kangoroo.pl)
+* make sure that the www user has write access to the resource directory  
+
+NOTE: The scripts for splitting the indexes have been tested under Linux. Maybe they also run under 
+Windows. You may want to create a batch file splitidx.bat . 
+
+
+------------
+
+Using Kangoroo Perl
+
+* start the web server
+* start a web brower and open the url cgi-bin/kangoroo.pl (or whereever you have installed the script)
+
+Note: In contrast to the scripts for splitting the indexes, the main Kangoroo-Perl scripts HAVE
+been successfully tested under Windows.
+
+Remark: The learn files of Kangoroo (QT) and Kangoroo-Perl are compatible in principle,
+however they use a different sorting. 
+
+
+------------
+
+License
+
+Kangoroo Perl is provided under the GNU GPL license v2, redistribution is permitted.
+No warranty can be granted.
+
+For the license of the dictionaries, please see the respective files.

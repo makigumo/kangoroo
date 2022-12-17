@@ -1,0 +1,4 @@
+tmake -o Makefile kangoroo-qpe.pro
+make clean
+make
+

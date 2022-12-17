@@ -1,0 +1,32 @@
+
+Kangoroo -- perl scripts for generating the dictionaries, in particular merging "DEdict" from Edict and Wadoku
+
+January 2007, Jan Poland
+
+WARNING: this document contains mainly some notes for my own reference, if you want to use the perl scripts, don't
+expect any documentation here!
+
+I started with the following ingredients:
+
+1. actual version of EDict from Jim Breen's web site
+1a. converted to utf8 removed the first comment line manually and called this edict0.utf8
+
+2. actual version (SQL dump) of Wadoku from Ulrich Apel's site
+2a. exported this to wadoku0.utf8 by building a MySql database and using the script "export.sh"
+
+   Try e.g. the following commands and others:
+
+   mysql -u root wadoku
+   describe entries;
+
+   Attention: after the sql export, the resulting outpuf file contains some MAC EOL's !! Remove them e.g. with emacs.
+   (Maybe this is also possible with sed.)
+
+3. actual version of Kanjidic from Jim Breen's site, saved as kanjidic.utf8 (converted to utf8)
+
+4. a word frequency file wordfreq/wordfreq_ck.utf8, obtained from wordfreq_ck on Jim Breen's site
+
+Put all these in the current directory.
+THEN, JUST RUN THE SCRIPT proc.sh 
+
+Enjoy!

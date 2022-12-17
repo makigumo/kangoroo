@@ -1,0 +1,219 @@
+<html>
+<body>
+<img src="kanglogo.gif" width="640" height="96" align="left " vspace="0" hspace="30" alt="">
+<br clear=all>
+<b> Go directly to the <a href="#downloads">downloads</a></b>
+<br>
+<h3>Description</h3>
+This is a Japanese to English or German+English dictionary software (extendible to other languages) with the following additional functions.<br>
+1. You can click on Kanji, this gives you information about the Kanji and a list of words containing the Kanji. "Jumping" from one Kanji to another helps you to learn meaning and readings.<br>
+2. You can memorize words and produce your own learn file. The dictionary reflects your actual vocabulary knowledge and becomes your repetition assistant.<br>
+3. (new in v0.8) Kanji are displayed graphically segmented into their "building blocks". Jumping between the building blocks helps to memorize the Kanji. Moreover, keywords can be assigned to Kanji and building blocks, in order to further facilitate memorization.<br>
+4. Training ("flash card") function: Kangoroo contains different Vocabulary and Kanji trainers.
+
+<p>Kangoroo also provides "DEDict", a Japanese to German+English dictionary compiled from EDict (due to Jim Breen) and WaDoku (due to Ulrich Apel).
+
+<p>Kangoroo uses indexes (hash files) for fast search. Currently available indexes are for "DEDict" and for EDict (Japanese-English, Jim Breen). Perl scripts for generating indexes for other dictionaries are available below.
+
+<h3>Dictionaries</h3>
+
+Currently, two dictionaries are available for Kangoroo:
+<ol>
+<li> <a href="http://www.csse.monash.edu.au/~jwb/japanese.html">EDict</a>, Version January 2007, due to Jim Breen
+<li> DEDict, a combination of
+<ul>
+  <li> <a href="http://www.wadoku.de">WaDoku</a>, Version November 2006, due to Ulrich Apel, and
+  <li> <a href="http://www.csse.monash.edu.au/~jwb/japanese.html">EDict</a>, Version January 2007, due to Jim Breen
+</ul>
+</ol>
+The dictionaries are combined with
+KanjiDic, based on Jim Breen's KanjiDic, but shortened in
+order to improve readability on Sharp Zaurus  
+
+<h3>Screenshots</h3>
+
+<img src="kangoroo-v0.8-screenshot.gif" width="640" height="480" align="left " vspace="0" hspace="30" alt="">
+<br clear=all>
+Kangoroo v0.8 on the Sharp Zaurus (with German+English dictionary DEDict), a Kanji page and keyword dialog
+<br clear=all>
+<br>
+
+<img src="kangoroo-screenshot.gif" width="640" height="421" align="left " vspace="0" hspace="30" alt="">
+<br clear=all>
+Old version with annotations: Kangoroo v.5 on the Sharp Zaurus, demonstrating a query ("instead") and a click on the Kanji.
+<br clear=all>
+
+<h3>What's new</h3>
+
+<ul>
+<li>v0.5  (June 2006) initial version, 
+<li>v0.55 (July 2006) font size is now adjustable, small bugfixes
+<li>v0.8 (January 2007) Kanji segmentation is included
+<li>v1.0 (February 2007) Dictionary update, small bugfixes
+<li>v1.01 (February 2007) small bugfixes
+</ul>
+
+<h3><a name="downloads">Installing and using Kangoroo</a></h3>
+
+<font color="red">UPDATE WARNING:</font> If you install the new Kangoroo v1.01 or v1.0 over an old version (up to 0.8), the learn file will
+be matched to the new dictionary the first time you start the software. This is supposed to automatically match
+most of the entries correcty, but there may be some entries that cannot be matched (in particular those being Kana only
+in the previous dictionary). Those entries will be displayed
+and can be processed manually afterwards. Anyway, <font color="red">
+it is advisable to backup your learn file(s) before updating.</font> Also, <font color="blue">
+be prepared that the update process may take some minutes, according to the length of
+your learn file, especially on the slow Zaurus.</font> 
+
+<p>Kangoroo runs on a Sharp Zaurus or on a PC with Linux or Windows XP (and maybe older versions, see the 
+<a href="#problems">problems</a> section).
+The software can be easily compiled for other Unix systems with QT 3.x.
+Kangoroo should also compile on MAC with QT 3.x .
+
+<p>You need Japanese fonts and a Japanese input method installed to your system.
+Moreover, you need QT 3.x. or Qtopia (Sharp Zaurus).
+
+<p>The Japanese-German+English dictionary plus indexes (DEDict) need about 55 MB disk space, the Japanese-English dictionary plus indexes about 15 MB.
+
+<p>Download one of the following Kangoroo versions and install it (see the README file if necessary):
+<ul> 
+<li><font color="red">Sharp Zaurus</font>, English dictionary (EDict), if you have enough space on /usr/local (this applies
+for instance if your Zaurus has a hard disk, such as SLC-3100 or SLC-3200):
+<a href="kangoroo_edict+kpic_1.01_arm.ipk">kangoroo_edict+kpic_1.01_arm.ipk</a>.<br>
+<font color="red">Alternative:</font> In case this package does not install correctly for some reason (it may be too large in certain cases), download and install the following two packages instead:
+<a href="kangoroo_edict_1.01_arm.ipk">kangoroo_edict_1.01_arm.ipk</a> and
+<a href="kangoroo-kpic_1.01_arm.ipk">kangoroo-kpic_1.01_arm.ipk</a>. The first package contains the software and runs also stand-alone, the second one the Kanji pictures.
+<li><font color="red">Sharp Zaurus</font>, German+English dictionary (DEDict), if you have enough space on /usr/local (this applies for instance if your Zaurus has a hard disk, such as SLC-3100 or SLC-3200) 
+<a href="kangoroo_dedict+kpic_1.01_arm.ipk">kangoroo_dedict+kpic_1.01_arm.ipk</a>.<br>
+<font color="red">Alternative:</font> In case this package does not install correctly for some reason (it may be too large in certain cases), download and install the following two packages instead:
+<a href="kangoroo_dedict_1.01_arm.ipk">kangoroo_dedict_1.01_arm.ipk</a> and
+<a href="kangoroo-kpic_1.01_arm.ipk">kangoroo-kpic_1.01_arm.ipk</a>. The first package contains the software and runs also stand-alone, the second one the Kanji pictures.
+<li><font color="red">Sharp Zaurus</font>, if you do not have enough space on /usr/local (for instance if your Zaurus has no hard disk, such as SLC-1000, and you have not configured an SD/CF card in order to provide additional memory on /usr/local), download
+<a href="kangoroo_1.01_arm_sd.ipk">kangoroo_1.01_arm_sd.ipk</a> or
+<a href="kangoroo_1.01_arm_cf.ipk">kangoroo_1.01_arm_cf.ipk</a>, depending on if you want to install the
+resources on SD or CF card. In this case, you also need one of the following
+two resource packages.
+<ul>
+<li>English dictionary (EDict) resource package, <a href="kangoroo_1.01_edict.zip">kangoroo_1.01_edict.zip</a> OR
+<li>German+English dictionary (DEDict) resource package, <a href="kangoroo_1.01_dedict.zip">kangoroo_1.01_dedict.zip</a>
+</ul>
+Unpack the resource package to your SD/CF card, making sure that the SD/CF card contains a directory kangoroo 
+afterwards. <br><br>
+<li><font color="red">Microsoft Windows</font>, English dictionary (EDict),
+<a href="kangoroo_edict_1.01_win.exe">kangoroo_edict_1.01_win.exe</a>. In case QT is not installed, you also need 
+<a href="qt3_dll.exe">qt3_dll.exe</a>.
+<li><font color="red">Microsoft Windows</font>, German+English dictionary (DEDict),
+<a href="kangoroo_dedict_1.01_win.exe">kangoroo_dedict_1.01_win.exe</a>. In case QT is not installed, you also need 
+<a href="qt3_dll.exe">qt3_dll.exe</a>. <br><br>
+<li><font color="red">Linux</font>, precompiled<br>
+Available binaries:
+<ul>
+<li> Suse 9.1: <a href="kangoroo_1.01_linux_suse91.tar.bz2">kangoroo_1.01_linux_suse91.tar.bz2</a>
+</ul>
+The binaries perhaps work on other systems - in case they don't, please compile the source.<br>
+You also need one resource package
+<ul>
+<li>English dictionary (EDict) resource package, <a href="kangoroo_1.01_edict.zip">kangoroo_1.01_edict.zip</a> OR
+<li>German+English dictionary (DEDict) resource package, <a href="kangoroo_1.01_dedict.zip">kangoroo_1.01_dedict.zip</a>
+</ul>
+Then, EITHER (installation only for your user) 
+<ul>
+<li> unpack everything to your home directory (i.e. all files will be written to ~/kangoroo)
+<li> create a directory ~/kangoroo-learn
+<li> start the program by typing "~/kangoroo/bin/kangoroo" (or create a symbolic link)
+</ul>
+OR (you need write permissions to /usr/local for this)
+<ul>
+<li> unpack everything to /usr/local  (i.e. all files will be written to /usr/local/kangoroo)
+<li> execute "cd /usr/local/kangoroo; ./install.sh"
+</ul>
+Please make sure that Qt3 is installed.
+<p>Note: You may install kangoroo to different places than /usr/local, just replace /usr/local
+by a directory of your choice. If you want to install the binary to a different place than
+/usr/local/bin, invoke "./install.sh /path/to/binary" <br><br>
+<li><font color="red">Installation from source</font> Download
+<a href="kangoroo_1.01_source.tar.bz2">kangoroo_1.01_source.tar.bz2</a>. You also need one resource package
+<ul>
+<li>English dictionary (EDict) resource package, <a href="kangoroo_1.01_edict.zip">kangoroo_1.01_edict.zip</a> OR
+<li>German+English dictionary (DEDict) resource package, <a href="kangoroo_1.01_dedict.zip">kangoroo_1.01_dedict.zip</a>
+</ul>
+Unpack kangoroo_1.01_source.tar.bz2 and run build-qt, build-qt-win, or build-qpe, depending on if you want to compile it for Qt, Qt on Windows,
+or Qtopia (Sharp Zaurus).<br>
+Install the program as described above for Linux:
+<ul>
+<li> unpack the resources to to /usr/local (i.e. all files will be written to /usr/local/kangoroo)
+<li> copy the binary "kangoroo" to /usr/local/kangoroo/bin
+<li> execute "cd /usr/local/kangoroo; ./install.sh" (use this only for Unix/Linux)</ul>
+Please make sure that Qt3 (including the header files, i.e. the "development package") is installed.
+</ul>
+
+<h3>How to</h3>
+<ul>
+<li><b>Using several learn files on one user account</b><br>
+Create different learn files in the learn file directory, e.g. by placing empty files there.
+The learn file directory is usually
+<ul><li>on Windows: the subdirectory kangoroo-learn in the Kangoroo installation directory
+<li>on Linux or Zaurus: the directory ~/kangoroo-learn
+<li>in case ~.kangoroo or kangoroo.cnf exists: the second line of this file point to the learn file directory
+</ul>
+<li><b>Installing more dictionaries (other languages)</b><br>
+download the perl scripts for creating indexes, 
+<a href="kangoroo_1.01_indexscripts.tar.bz2">kangoroo_1.01_indexscripts.tar.bz2</a> and see the README file<br>
+Note: Building indexes is a little time-consuming (can take hours on a slow PC)<br>
+Note: The scripts have been tested under Linux. Maybe they also run under Windows, however
+you definitely have to add a "binmode(file)" to each open file command, and you have to
+may want to create a batch file buildindexes.bat . Also, you need the "wc" (word count) program.<br>
+<font color="red">New:</font> My perl scripts for merging EDict and Wadoku in order to obtain DEDict are
+available: <a href="kangoroo_1.01_makedic.tar.bz2">kangoroo_1.01_makedic.tar.bz2</a>
+<li><b>Customizing the KanjiDic</b><br>
+You can customize the KanjiDic, in particular in order to display more information
+and use a different index from Heisig. To this aim,
+download the perl scripts for creating indexes, 
+<a href="kangoroo_1.01_indexscripts.tar.bz2">kangoroo_1.01_indexscripts.tar.bz2</a> and see the README file
+<li><b>The configuration file</b><br>
+Kangoroo uses a configuration file, which is<br>
+~/.kangoroo under Linux/Unix/Zaurus and<br>
+&lt;windows directory&gt;\kangoroo.cnf under Windows.<br>
+This file contains two lines: <ul>
+ <li> the first line is the absolute (or relative) path to the resource directory, 
+ <li> the second line is the absolute (or relative) path to the learn directory.</ul>
+<i>The paths need to end with a tralining (back)slash!</i><br>
+Please do not use the "~" symbol for the paths.<br>
+If there are different users on your system, you can adjust the installation
+such that each user gets his own configuration file and therefore his own
+learn directory (this is default for the Linux installation, for Windows you
+have to do this manually).
+</ul>
+
+<h3>Credits</h3>
+The Kangoroo software is only a small part of the whole! Many thanks to the authors and maintainers of the dictionaries, who have made this project possible<br>
+<font color="red">Jim Breen</font>, author of <a href="http://www.csse.monash.edu.au/~jwb/japanese.html">EDict</a> (Japanese-English dictionary)<br>
+<font color="red">Ulrich Apel</font>, author and coordinator of <a href="http://www.wadoku.de">WaDoku</a> (Japanese-German dictionary)<br>
+and all other contributors to the dictionaries!
+<br><br>
+Many thanks also to <br><font color="red">James Heisig</font> who proposed to segment Kanji in order to memorize them<br>
+<font color="red">Anne Poland</font> who did the present segmentation.
+
+<h3>License</h3>
+<ul>
+<li> Kangoroo is provided under the GNU GPL license v2. This means that modification and/or redistribution of the whole software or parts is permitted, provided that the result is again GPL. This holds in particular for the segmentation of the Kanji, which is due to Anne Poland and Jan Poland.
+<li> EDICT and KANJIDIC are Creative Commons Attribution-ShareAlike Licence, please
+see the license at <a href="http://www.csse.monash.edu.au/~jwb/japanese.html">Jim
+Breen's</a> page or the file dict-license.html provided with the complete
+package.
+<li> WaDoku is copyright and may be used in free software products (such as Kangoroo), please
+see the license at the <a href="http://www.wadoku.de">WaDoku</a> page or the file 
+WaDokuDatai_Lizenz.html provided with the complete package.
+</ul>
+If you download the software, please see the license files for details!
+
+<h3><a name="problems">Problems</a></h3>
+<ul>
+<li>QT has been reported to work on Windows 98/ME, however Kangoroo seems not to work
+<li>Kangoroo has not been tested on Windows 2000 or NT
+<li>Kangoroo has not yet been compiled for MacOS: If you do so I would be glad if you drop me a line!
+</ul>
+
+<p><font color="red">Why that name, "Kangoroo"?</font> This name has two meanings. One relates to the animal and comes from the main feature of of "jumping" from one Kanji to another. The other one is hidden in the Japanese writing, just find out yourself, e.g. by installing and trying the program...
+
+</body>
+</html>

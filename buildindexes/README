@@ -1,0 +1,226 @@
+
+
+========================================
+Kangoroo v1.0, Jan Poland, February 2007
+========================================
+
+http://www-alg.ist.hokudai.ac.jp/~jan/kangoroo.html
+
+This is a QT frontend for Japanese dictionaries in the EDict format. Moreover, it offers the possibility to browse Kanji by their building blocks. The main features of Kangoroo are:
+1. You can click on Kanji, this gives you information about the Kanji and a list of words containing the Kanji. "Jumping" from one Kanji to the other helps you to memorize meaning and readings.
+2. You can memorize words and produce your own learn file. The dictionary reflects your actual vocabulary knowledge and becomes your repetition assistant.
+3. (new in v0.8) Kanji are displayed graphically segmented into their "building blocks". Jumping between the building blocks helps to memorize the Kanji. Moreover, keywords can be assigned to Kanji and building blocks, in order to further facilitate memorization.
+4. Training ("flash card") function: Kangoroo contains different vocabulary and Kanji trainers.
+
+Kangoroo also provides "DEDict", a Japanese to German+English dictionary compiled from EDict (due to Jim Breen) and WaDoku (due to Ulrich Apel).
+
+Kangoroo uses indexes (hash files) for fast search. Currently available indexes are for DEDict and for EDict (Japanese-English, Jim Breen). Perl scripts for generating indexes for other dictionaries are available at the homepage.
+
+====================================
+Dictionaries
+====================================
+
+Currently, two dictionaries are available for Kangoroo:
+1. EDict, Version January 2007, due to Jim Breen
+2. DEDict, a combination of 
+  - WaDoku, Version November 2006, due to Ulrich Apel, and
+  - EDict, Version January 2007, due to Jim Breen
+  
+The dictionaries are combined with KanjiDic, based on Jim Breen's KanjiDic, 
+but shortened in order to improve readability on Sharp Zaurus
+
+====================================
+Segmentation
+====================================
+
+The current segmentation contains 2334 Kanji and building blocks in total. 2108 of them are Kanji, 34 radicals or other
+characters that occur in standard Japanese character sets, and 192 building blocks which do not occur in character sets.
+
+====================================
+System requirements
+====================================
+
+Kangoroo runs on a Sharp Zaurus or on a PC with Linux or Windows XP (and maybe older versions, see the problems section). The software can be easily compiled for other Unix systems with QT 3.x.
+Kangoroo should also compile on MAC with QT 3.x .
+
+You need Japanese fonts and a Japanese input method installed to your system. Moreover, you need QT 3.x. or Qtopia (already available on Sharp Zaurus).
+
+The Japanese-German+English dictionary plus indexes (DEDict) need about 75 MB disk space, the Japanese-English dictionary plus indexes about 35 MB.
+
+====================================
+Installation
+====================================
+
+You can choose between versions containing EDict and DEDict.
+
+--------------------------
+Sharp Zaurus:
+--------------------------
+Zaurus SLC-3200, SLC-3100, or other models with hard drive, or if there is sufficient space in /usr/local:
+Download and install kangoroo_edict_1.0_arm.ipk or kangoroo_dedict_1.0_arm.ipk
+
+Zaurus SLC-1000 or other models without hard drive, if there is not sufficient space in /usr/local:
+1. Download and install kangoroo_1.0_arm_sd.ipk or kangoroo_1.0_arm_cf.ipk, depending on if you want to
+install the resources on SD or CF card
+2. Download kangoroo_1.0_edict.zip or kangoroo_1.0_dedict.zip and unpack it to your SD/CF card, making sure that
+the SD/CF card contains a directory "kangoroo" after installation
+
+--------------------------
+Windows:
+--------------------------
+Download and execute either kangoroo_edict_1.0_win.exe or kangoroo_dedict_1.0_win.exe . In case QT is not installed, 
+you also need qt3_dll.exe .
+
+--------------------------
+Linux, precompiled:
+--------------------------
+WARNING: currently available binaries for Suse 9.1. The executables might not work on other systems!
+1. Download the binary kangoroo_1.0_linux_XXX.tar.bz2 plus either kangoroo_1.0_edict.zip or kangoroo_1.0_dedict.zip
+EITHER (installation only for your user) 
+  2a. unpack everything to your home directory (i.e. all files will be written to ~/kangoroo)
+  3a. create a directory ~/kangoroo-learn
+  4a. start the program by typing "~/kangoroo/bin/kangoroo" (or create a symbolic link)
+OR (you need write permissions to /usr/local for this)
+  2b. unpack everything to /usr/local (i.e. all files will be written to /usr/local/kangoroo)
+  3b. execute "cd /usr/local/kangoroo; ./install.sh"
+  
+Please make sure that Qt3 is installed.  
+
+Note: You may install kangoroo to different places than /usr/local, just replace /usr/local
+by a directory of your choice. If you want to install the binary to a different place than
+/usr/local/bin, invoke "./install.sh /path/to/binary"
+
+--------------------------
+Compiling from Source:
+--------------------------
+1. Download kangoroo_1.0_source.tar.bz2 and one resource package (kangoroo_1.0_edict.zip or kangoroo__1.0_dedict.zip or both)
+2. Unpack kangoroo_1.0_source.tar.bz2 and run build-qt, build-qt-win, or build-qpe, 
+   depending on if you want to compile it for Qt, Qt on Windows, or Qtopia (Sharp Zaurus).
+3. Install the program as described above for Linux:
+  a. unpack the resources to to /usr/local (i.e. all files will be written to /usr/local/kangoroo)
+  b. copy the binary "kangoroo" to /usr/local/kangoroo/bin
+  c. execute "cd /usr/local/kangoroo; ./install.sh (use this only for Unix/Linux)"
+
+Please make sure that Qt3 (including the header files, i.e. the "development package") is installed.
+
+
+====================================
+How to
+====================================
+
+------------------------------------------
+Using several learn files in one user account
+------------------------------------------
+
+Create different learn files in the learn file directory, e.g. by placing empty files there.
+The learn file directory is usually
+  - on Windows: the subdirectory kangoroo-learn in the Kangoroo installation directory
+  - on Linux or Zaurus: the directory ~/kangoroo-learn
+  - in case ~.kangoroo or kangoroo.cnf exists: the second line of this file point to the learn file directory
+  
+------------------------------------------
+Installing more dictionaries (languages)
+------------------------------------------
+
+ - prepare the dictionary in the EDict format, UTF8 coded, first the common (P) entries and then the rest, 
+   both groups alphabetically sorted, and rename it to "dic.utf8", you may download the perl scripts
+   kangoroo_1.0_makedic.tar.bz2 to get an template for complex merging operations
+ - download the perl scripts for creating indexes, kangoroo_1.0_indexscripts.tar.bz2 and place them
+   into the same directory as dic.utf8
+ - in case you want a differnent Kanji dictionary: prepare a Kanji dictionary or take Jim Breen's Kanjidic, 
+   rename it to "kdic.utf8" (see also kangoroo_1.0_makedic.tar.bz2)
+ - start buildindexes
+ - use the resulting resource files  
+ 
+Note: 
+ - Building indexes is a little time-consuming (can take hours on a slow PC)
+ - The scripts have been tested under Linux. Maybe they also run under Windows, however
+   you definitely have to add a "binmode(<file>)" to each open file command, and you
+   may want to create a batch file buildindexes.bat . Also, you need the "wc" (word count) program
+   (or easily reimplement this in perl).
+
+------------------------------------------
+Customizing the KanjiDic
+------------------------------------------
+
+You can customize the KanjiDic, in particular in order to display more information
+and use a different index from Heisig. To this aim:
+ 
+ - download the perl scripts for creating indexes, kangoroo_1.0_indexscripts.tar.bz2
+ - prepare a Kanji dictionary or take Jim Breen's Kanjidic, rename it to "kdic.utf8"
+ - edit the buildindexes script: set up the desired index (e.g. "L" = Heisig, see the Kanjidic documentation)
+ - start buildindexes
+ - use the resulting resource files  
+
+------------------------------------------
+The configuration file
+------------------------------------------
+
+Kangoroo uses a configuration file, which is
+~/.kangoroo under Linux/Unix/Zaurus and
+<windows directory>\kangoroo.cnf under Windows.
+This file contains two lines: 
+ - the first line is the absolute (or relative) path to the resource directory, 
+ - the second line is the absolute (or relative) path to the learn directory.
+The paths need to end with a trailing (back)slash!
+Please do not use the "~" symbol for the paths.
+If there are different users on your system, you can adjust the installation
+such that each user gets his own configuration file and therefore his own
+learn directory (this is default for the Linux installation, for Windows you
+have to do this manually).
+
+====================================
+License
+====================================
+
+Kangoroo is provided under the GNU GPL license v2.
+Redistribution of the whole software or parts is permitted, but must also be GPL.
+This holds in particular for the segmentation of the Kanji.
+
+For the licenses of the dictionaries, please see the files
+edict-license.html and
+WaDokuDatei_Lizenz.html
+
+
+====================================
+Warranty
+====================================
+
+Kangoroo is provided "as is", without any warranty.
+
+WARNING: The source code is being made available to the public, in order to
+  increase the amount of available source code for the Sharp Zaurus, and in order
+  to allow interested individuals to customize and improve the software.
+  THE SOURCE CODE IS NEITHER WELL STRUCTURED NOR DOCUMENTED!
+
+  
+====================================
+Problems
+====================================
+
+- QT has been reported to work on Windows 98/ME, however Kangoroo seems not to work
+- Kangoroo has not been tested on Windows 2000 or NT
+- Kangoroo has not yet been compiled for MacOS: If you do so I would be glad if you drop me a line!
+
+
+====================================
+Credits
+====================================
+
+The Kangoroo software is only a small part of the whole! Many thanks to the authors and maintainers of the dictionaries, who have made this project possible
+Jim Breen, author of EDict (Japanese-English dictionary)
+Ulrich Apel, author and coordinator of WaDoku (Japanese-German dictionary)
+and all other contributors to the dictionaries!
+
+Many thanks also to 
+James Heisig who proposed to segment Kanji in order to memorize them
+Anne Poland who did the present segmentation.
+
+====================================
+Changelog
+====================================
+
+v1.0 February 2007 Bugfixes, dictionary update
+v0.8 January 2007 Kanji segmentation is included
+v0.55 2006/07/14  Small bugfixes, font size adjustable
+v0.5 initial version, June 2006

@@ -1,0 +1,10 @@
+#!/bin/sh
+if ! [ -d /home/zaurus/Documents/kangoroo-learn]; then
+  mkdir /home/zaurus/Documents/kangoroo-learn
+fi
+chown zaurus /home/zaurus/Documents/kangoroo-learn
+if ! [ -f /home/zaurus/.kangoroo]; then
+  echo /mnt/cf/kangoroo/ >/home/zaurus/.kangoroo
+  echo /home/zaurus/Documents/kangoroo-learn/ >>/home/zaurus/.kangoroo  
+fi
+chown zaurus /home/zaurus/.kangoroo

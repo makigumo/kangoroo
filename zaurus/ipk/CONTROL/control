@@ -1,0 +1,15 @@
+Package: kangoroo
+Priority: optional
+Section: qpe/applications
+Maintainer: Jan Poland <jan@ist.hokudai.ac.jp>
+Architecture: arm
+Version: 1.01
+Depends: qpe-base ($QPE_VERSION)
+License: GPL
+Description: Kangoroo
+ This is a Japanese to English or German+English dictionary software (extendible to other languages) 
+ with two additional functions.
+ 1. You can click on Kanji, this gives you information about the Kanji and a list of words containing 
+ the Kanji. "Jumping" from one Kanji to another helps you to learn meaning and readings.
+ 2. You can memorize words and produce your own learn file. The dictionary reflects your actual 
+ vocabulary knowledge and becomes your repetition assistant. 

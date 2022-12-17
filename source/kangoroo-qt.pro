@@ -1,0 +1,9 @@
+QTDIR           = /usr/lib/qt3
+TEMPLATE	= app
+#CONFIG		= qt warn_on debug
+CONFIG		= qt warn_on release
+HEADERS		= kangoroo.h kangbrowser.h kanglineedit.h kangpushbutton.h kanjipic.h keydlg.h
+SOURCES		= main-qt.cpp kangoroo.cpp kangbrowser.cpp kanglineedit.cpp kangpushbutton.cpp kanjipic.cpp keydlg.cpp
+INCLUDEPATH	+= $$QTDIR/include
+DEPENDPATH	+= $$QTDIR/include
+TARGET		= kangoroo

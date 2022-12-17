@@ -1,0 +1,7 @@
+[Desktop Entry]
+Comment=Kangoroo
+Exec=kangoroo
+Icon=kangoroo
+Type=Application
+Name=Kangoroo
+Display=640x480/144dpi,480x640/144dpi

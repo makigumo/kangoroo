@@ -1,0 +1,64 @@
+Kangoroo 漢語労 Instructions
+
+Short instructions:
+Reading the whole reference below may be tedious! Playing with Kangoroo is easy and fun.
+- It's basically a dictionary software. Type your queries in Japanese or English (or German) and press enter or click "Search".
+- All blue text in the main text area is clickable. E.g. click on Kanji in order to follow links (try this one 漢).
+- Kanji are segmented into their building blocks in the upper left. You may click on the building blocks...
+- The "Train" button gives access to various "flash card" vocabulary or Kanji trainers, which you can select from the menu. Before training, you need to add vocabulary or Kanji to the respective lists...
+
+... See below how to do this and many other things. But first, we recommend you to try the basic features of Kangoroo -- enjoy!
+
+Introduction:
+This is a Japanese to English or German+English dictionary software (extendible to other languages) with some additional functions.
+1. You can click on Kanji, this gives you information about the Kanji and a list of words containing the Kanji (give it a try and click 漢!). "Jumping" from one Kanji to another helps you to learn meaning and readings.
+2. You can memorize words and produce your own learn file. The dictionary reflects your actual vocabulary knowledge and becomes your repetition assistant.
+3. Kanji are displayed graphically segmented into their "building blocks". Jumping between the building blocks helps to memorize the Kanji. Moreover, keywords can be assigned to Kanji and building blocks, in order to further facilitate memorization.
+4. Training ("flash card") function: Kangoroo contains different Vocabulary and Kanji trainers.
+
+Dictionaries:
+The default Japanese-English dictionary is Jim Breen's EDict, containing roughly 110,000 entries. About 20,000 terms are marked as "common" in comtemporary Japanese (priority entries). For the Kanji, Jim Breen's Kanjidic ist used. The Japanese to German+English dictionary "DEDict" available as part of Kangoroo is a combination of EDict and Ulrich Apel's WaDoku Japanese-German dictionary.
+
+Usage:
+In order to do a simple dictionary query, type in your query with Romaji, Kana, or Kanji, and press Enter or click on "search". "Memo" searches only among the memorized entries (see also the explanations for the "Settings" menu below). "Kanji" provides information about the Kanji you entered: The Japanese readings, the English meanings, and the Heisig index. Additionally, a list of words containing this Kanji is displayed.
+
+Wildcards:
+Queries are considered as whole words. You can use wildcards: * means any sequence of characters, ? means exactly one characters. For instance, "din*" finds entries starting with "din", e.g. diner (会食), "?食" yields two-character words ending with 食 such as 外食, and "食*物" finds 食べ物 (たべもの) and others. You can search for more than one term: "食べ* eat" finds the entry "to eat", 食べる (to eat), "食べ* *eat" also delivers 食べ過ぎる (overeat). Be careful to place the query terms in the correct order: First Japanese writing (containing Kanji), then Japanese reading, then German (if applicable), then English.
+
+Results:
+The results are colored: A green line points to a "common" entry, red means "memorized" and yellow is memorized with the additional "*-flag", this is useful for repetition. Memorized entries are always displayed first.
+
+In each result line displayed, there are links clickable at the end: ">>" lets you see the full entry (if it was too long to fit in one line), "M" memorizes it (the entry becomes red), "*" memorizes it with the *-flag (the entry becomes yellow), and "X" deletes it from the memorized list. If people are using Kangoroo on the same computer, each of them can have his own learn file. The learn file which is actually used for memorizing can be selected from the "LearnFile" menu.
+
+Kanji segmentation:
+In the upper left of the Kangoroo application, the current Kanji (if applicable) is displayed graphically segmented into its "building blocks". You can click on a building block and thus jump to the relative information. Many building blocks are themselves Kanji, but not all are. Conversely, when the information for a Kanji or building block is displayed, at list of Kanji which contain the present one as building block is shown. This list is usually displayed after the word ist, unless the option "display KanjiBB first" in the settings menu is checked.
+
+Keyword annotation:
+Those Kanji and building blocks that displayed graphically segmented, can be endowed with a keyword in order to further facilitate memorizing. To this aim, just click on the text "(no keyword given)" displayed directly after the Kanji, and a dialog will pop up. Kanji that have been assigned keywords, can be trained (see below), when the keyword dialog pops up, you can choose to mark a Kanji specifically for repetition.
+
+Training:
+For repetition of vocabulary or Kanji, you can press the "train" button. In case of vocabulary, this displays a part of a random entry from the learn file, you can choose in the "Train" menu if you want to see the Kanji, the Japanese reading, or the translation. Moreover, you can choose in the "Settings" menu if the entry is chosen from all memorized words, or only those with the *-flag turned on (yellow words) or off (only red words). This setting also affects the result of "Memo" searches.
+
+Training Kanji selects a random Kanji from those already annotated. You can either train by the Kanji, the segmentation, or the keyword. Moreover, you may choose if you want to train all or only marked Kanji, and if you want to include those building blocks that are no Kanji.
+
+Shortcuts: 
+Most buttons have a shortcut, this is the underlined character: Press Ctrl plus this underlined key in order to push the button. Ctrl+B navigates backward, Ctrl+F forward.
+
+Credits:
+The Kangoroo software is only a small part of the whole! Many thanks to the authors and maintainers of the dictionaries, who have made this project possible
+Jim Breen, author of EDict (Japanese-English dictionary)
+Ulrich Apel, author and coordinator of WaDoku (Japanese-German dictionary)
+and all other contributors to the dictionaries!
+
+Many thanks also to 
+James Heisig who proposed to segment Kanji in order to memorize them
+Anne Poland who did the present segmentation.
+
+More information:
+There are fast queries and slow queries: If your query contains a whole word or at least the starting two letters or one Kana/Kanji of a word, then an index can be used, and the query will be much faster. The scope of the fast index searches is always the full database, while for the slow full searches you restrict the search to the common entries in the "Settings" menu.
+
+Clicking "cp&p" (copy and paste), the current selection of the results area is copied to the query field. Typing Ctrl+V in the query field executes the usual paste operation of the contents of the clipboard.
+
+Typing a number and clicking on "Kanji" retrieves the Kanji with the corresponding Heisig index number.
+
+Why the name 漢語労 ("Kangoroo")? This name has two meanings. One relates to the animal and comes from the main feature of of "jumping" from one Kanji to another. The other one is hidden in the Japanese writing, just try and query the Kanji by clicking them.
